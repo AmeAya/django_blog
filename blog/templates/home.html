@@ -2,8 +2,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <a href="{% url 'post_new' %}">Create new post</a>
   {% for post in object_list %}
-      <a href="{% url 'post_new' %}">Create new post</a>
       <div class="post-entry">
         <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
         <p>{{ post.body }}</p>
